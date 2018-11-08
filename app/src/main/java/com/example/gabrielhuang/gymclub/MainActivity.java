@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
@@ -24,7 +25,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private FragmentManager fragmentManager;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -43,29 +43,29 @@ public class MainActivity extends AppCompatActivity
 //            }
 //        });
 
-        fragmentManager = getSupportFragmentManager();
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        ItemSelect(R.id.navigation_home);
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.navigation_home:
-                        Toast.makeText(getApplicationContext(), "默认Toast样式",
-                                Toast.LENGTH_SHORT).show();
-                        FragmentTransaction transaction = fragmentManager.beginTransaction();
-                        transaction.add(R.id.vp, new HomeFragment());
-                        transaction.commit();
-                        break;
-                    case R.id.navigation_channel:
-                        Toast.makeText(getApplicationContext(), "默认Toast样式",
-                                Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.navigation_person:
-                        break;
-                    case R.id.navigation_news:
-                        break;
-                }
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                FragmentTransaction transaction = fragmentManager.beginTransaction();
+//                switch (menuItem.getItemId()) {
+//                    case R.id.navigation_home:
+//                        transaction.replace(R.id.fragment_frame, new HomeFragment());
+//                        transaction.commit();
+//                        break;
+//                    case R.id.navigation_channel:
+//                        Toast.makeText(getApplicationContext(), "默认Toast样式",
+//                                Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case R.id.navigation_person:
+//                        break;
+//                    case R.id.navigation_news:
+//                        break;
+//                }
+                ItemSelect(menuItem.getItemId());
+                return true;
             }
         });
 
@@ -91,6 +91,25 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    public void ItemSelect(int id) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        Fragment fragment = null;
+        switch (id) {
+            case R.id.navigation_home:
+                fragment = new HomeFragment();
+                break;
+            case R.id.navigation_channel:
+                fragment = new HomeFragment();
+                break;
+            case R.id.navigation_person:
+                break;
+            case R.id.navigation_news:
+                break;
+        }
+        transaction.replace(R.id.fragment_frame, fragment);
+        transaction.commit();
+    }
 
     @Override
     public void onBackPressed() {
