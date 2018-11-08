@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new HomeFragment();
                 break;
             case R.id.navigation_channel:
-                fragment = new HomeFragment();
+                fragment = new ChannelFragment();
                 break;
             case R.id.navigation_person:
                 break;
