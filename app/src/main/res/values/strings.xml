@@ -26,5 +26,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="football">当然它也指足球比赛中的用球，但在这里它代表前者。标准的足球比赛由两队各派11名队员参与，包括10名球员及1名守门员，互相在长方形的草地球场上互相对抗、互相进攻。</string>
+    <string name="fwc">俯卧撑是一项可随意定制和调整强度的运动，如人们可以把一只手放在高台上，另一只手放在地上做俯卧撑；或者将双手与身体成不等距，这两种形式都可以增加单臂或单侧身体的训练强度，而且可以锻炼各种不同部位的肌肉。如果要增加难度，训练者可以用五指指尖撑地甚至单指做俯卧撑，或者单手以及负重做俯卧撑。</string>
 
 </resources>

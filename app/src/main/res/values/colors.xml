@@ -27,4 +27,7 @@
     <color name="colorPinkRose">#EC87C0</color>
     <color name="colorPinkRoseDark">#D770AD</color>
     <color name="text">#17202A</color>
+
+
+    <color name="booking">#99FFFF</color>
 </resources>
