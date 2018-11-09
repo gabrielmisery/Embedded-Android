@@ -9,23 +9,18 @@
         android:layout_height="wrap_content"
         android:background="@color/Home"
         android:orientation="vertical"
+        android:paddingBottom="10dp"
         tools:context=".HomeFragment">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="160dp"
-            android:background="@drawable/banner_gym"
+            android:background="@drawable/index"
             android:gravity="bottom"
-            android:text="SPORTS DASHBOARD"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp" />
-        <!--
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1pt"
-            android:layout_margin="8pt"
-            android:background="#a7a9ef"></View>
-        -->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,14 +32,16 @@
             android:layout_marginBottom="5dp"
             android:background="#efefef"
             android:gravity="center"
-            android:text="Seminar on Ripped Diet by you today at 3:20pm"
+            android:text="俯卧撑于2pm开始！！"
             android:textColor="@color/colorAccent"
             android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -69,7 +66,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/background">
 
             <TextView
@@ -89,20 +85,97 @@
                 android:text="添加"
                 android:textSize="20dp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
 
-
-
-            </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:text="俯卧撑入门"
+                android:textColor="@color/text"
+                android:textSize="55px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="12分钟" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="上次训练7天前" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:text="游泳入门"
+                android:textColor="@color/text"
+                android:textSize="55px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="20分钟" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="上次训练2天前" />
+        </LinearLayout>
     </LinearLayout>
-    <!--<RelativeLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content">-->
 
-    <!--</RelativeLayout>-->
 </ScrollView>
