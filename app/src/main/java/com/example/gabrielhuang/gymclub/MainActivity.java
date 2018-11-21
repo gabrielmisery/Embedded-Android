@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -23,9 +24,11 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +91,8 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
