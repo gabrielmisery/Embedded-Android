@@ -55,6 +55,13 @@
                 android:layout_marginTop="10dp"
                 android:text="Coach"
                 android:textSize="50px" />
+            <TextView
+                android:background="@drawable/bg_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:textSize="30dp"
+                android:text="一键查看附近的健身馆"/>
 
 
         </LinearLayout>
@@ -229,7 +236,9 @@
         <!--android:layout_marginLeft="20dp"-->
         <!--android:text="上次训练2天前" />-->
         <!--</LinearLayout>-->
+
     </LinearLayout>
+
 
 
 </ScrollView>

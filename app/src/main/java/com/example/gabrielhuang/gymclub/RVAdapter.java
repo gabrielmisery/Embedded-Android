@@ -12,12 +12,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> {
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> implements View.OnClickListener {
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    private OnItemClickListener mOnItemClickListener;
+
     @NonNull
     @Override
     public PersonViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_follow, viewGroup, false);
         PersonViewHolder pvh = new PersonViewHolder(v);
+        v.setOnClickListener(this);
         return pvh;
     }
 
@@ -26,12 +33,25 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder> 
         personViewHolder.personName.setText(persons.get(i).name);
         personViewHolder.personAge.setText(persons.get(i).age);
         personViewHolder.personPhoto.setImageResource(persons.get(i).photoId);
+        personViewHolder.itemView.setTag(i);
     }
 
     @Override
     public int getItemCount() {
         return persons.size();
     }
+
+    @Override
+    public void onClick(View v) {
+        if (mOnItemClickListener != null) {
+            mOnItemClickListener.onItemClick(v, (int) v.getTag());//注意这里使用getTag方法获取position
+        }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mOnItemClickListener = listener;
+    }
+
 
     public class PersonViewHolder extends RecyclerView.ViewHolder {
         CardView cv;

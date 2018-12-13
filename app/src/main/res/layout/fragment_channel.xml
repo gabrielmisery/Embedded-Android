@@ -346,6 +346,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/coach"
                             android:layout_width="160dp"
                             android:layout_height="200dp"
                             android:layout_margin="5dp"

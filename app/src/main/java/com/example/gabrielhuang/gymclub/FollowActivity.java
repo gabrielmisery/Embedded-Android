@@ -1,9 +1,11 @@
 package com.example.gabrielhuang.gymclub;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +25,6 @@ public class FollowActivity extends AppCompatActivity {
         }
     }
 
-
-    // This method creates an ArrayList that has three Person objects
-// Checkout the project associated with this tutorial on Github if
-// you want to use the same images.
     public void initializeData() {
         persons = new ArrayList<>();
         persons.add(new FollowActivity.Person("游泳", "60分钟", R.drawable.swimming));
@@ -44,5 +42,22 @@ public class FollowActivity extends AppCompatActivity {
         initializeData();
         RVAdapter adapter = new RVAdapter(persons);
         rv.setAdapter(adapter);
+        adapter.setOnItemClickListener(new RVAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                switch (position) {
+                    case 0: {
+                        Intent intent = new Intent(FollowActivity.this, VideoActivity.class);
+                        startActivity(intent);
+                    }
+                    case 1: {
+
+                    }
+                    case 2: {
+
+                    }
+                }
+            }
+        });
     }
 }
