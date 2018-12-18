@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -21,6 +22,9 @@ import android.widget.Toast;
 public class ChannelFragment extends Fragment {
     LinearLayout pushUps;
     LinearLayout coach;
+    LinearLayout coach2;
+    TextView coachName;
+    TextView coachName2;
 
 
     public ChannelFragment() {
@@ -51,25 +55,30 @@ public class ChannelFragment extends Fragment {
         });
 
 
-        //给教练发送邮件
+        //教练事件
         coach = getActivity().findViewById(R.id.coach);
+        coachName = getActivity().findViewById(R.id.coachName);
         coach.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SendEmailActivity.class);
+                Intent intent = new Intent(getActivity(), TrainerInfoActivity.class);
+                intent.putExtra("name",coachName.getText());
                 startActivity(intent);
-//                Uri uri = Uri.parse("mailto:1051898583@qq.com");
-//                String[] email = {"1051898583@qq.com"};
-//                Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
-//                intent.putExtra(Intent.EXTRA_CC, email); // 抄送人
-//                intent.putExtra(Intent.EXTRA_SUBJECT, "这是邮件的主题部分"); // 主题
-//                intent.putExtra(Intent.EXTRA_TEXT, "这是邮件的正文部分"); // 正文
-//                startActivity(Intent.createChooser(intent, "请选择邮件类应用"));
             }
         });
 
 
         //教练事件
+        coach2 = getActivity().findViewById(R.id.coach2);
+        coachName2 = getActivity().findViewById(R.id.coachName2);
+        coach2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TrainerInfoActivity.class);
+                intent.putExtra("name",coachName2.getText());
+                startActivity(intent);
+            }
+        });
 
     }
 

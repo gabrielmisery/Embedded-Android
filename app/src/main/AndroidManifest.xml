@@ -47,11 +47,17 @@
         <activity android:name=".FollowActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".SendEmailActivity" />
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="Q3jzDdr5LRDRqwZ7BcUohpKwPioH4bNy" />
+
+        <activity android:name=".TrainerInfoActivity"></activity>
+        <provider
+            android:name=".SqlProvider"
+            android:authorities="cn.scu.sqlprovider" />
     </application>
+
 
 </manifest>

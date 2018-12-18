@@ -356,6 +356,7 @@
                                 android:layout_height="160dp"
                                 android:src="@drawable/jishi1"/>
                             <TextView
+                                android:id="@+id/coachName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="张三"
@@ -365,6 +366,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/coach2"
                             android:layout_width="160dp"
                             android:layout_height="200dp"
                             android:layout_margin="5dp"
@@ -374,9 +376,10 @@
                                 android:layout_height="160dp"
                                 android:src="@drawable/jishi2"/>
                             <TextView
+                                android:id="@+id/coachName2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="张三"
+                                android:text="李四"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textColor="@color/colorWhite"/>
