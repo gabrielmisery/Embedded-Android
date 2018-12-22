@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    private TextView textView;
+    private TextView textView, qqLogin;
     private Button button;
     private EditText email, password;
 
@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         button = findViewById(R.id.loginButton);
         email = findViewById(R.id.editText4);
         password = findViewById(R.id.editText3);
+        qqLogin = findViewById(R.id.qqLogin);
 
         final String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
@@ -34,6 +35,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(), "欢迎回来" + userEmail,
                         Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //qq登录
+        qqLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, QQLoginActivity.class);
+                startActivity(intent);
             }
         });
 

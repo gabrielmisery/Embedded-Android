@@ -52,21 +52,6 @@ public class MainActivity extends AppCompatActivity
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//                FragmentTransaction transaction = fragmentManager.beginTransaction();
-//                switch (menuItem.getItemId()) {
-//                    case R.id.navigation_home:
-//                        transaction.replace(R.id.fragment_frame, new HomeFragment());
-//                        transaction.commit();
-//                        break;
-//                    case R.id.navigation_channel:
-//                        Toast.makeText(getApplicationContext(), "默认Toast样式",
-//                                Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.navigation_person:
-//                        break;
-//                    case R.id.navigation_news:
-//                        break;
-//                }
                 ItemSelect(menuItem.getItemId());
                 return true;
             }
@@ -118,7 +103,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

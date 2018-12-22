@@ -64,10 +64,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/loginButton"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="181dp"
         android:text="@string/noaccount"
         android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/qqLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/noAccount"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="0dp"
+        android:text="QQ登录" />
 
 </RelativeLayout>
 
